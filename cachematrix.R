@@ -41,8 +41,8 @@ makeCacheMatrix <- function(X = matrix()) {
 
 
 ##The cacheSolve() function below reads a cached inverse matrix or if the cached value is unavailable, computes the inverse and caches it. 
-##Its argument is a makeCacheMatrix() function.  
-
+##Its argument is a makeCacheMatrix() function.  When it reads a cached matrix it checks whether the matrix is invertible.
+ 
 cacheSolve <- function(X, ...) {
         INV <- X$getinverse()
         
